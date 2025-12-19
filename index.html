@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agargaon Restaurant - Management System</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo">
+        <i class="fas fa-utensils"></i>
+        <span>Agargaon Restaurant</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#dashboard"><i class="fas fa-chart-line"></i> Dashboard</a></li>
+        <li><a href="#menu"><i class="fas fa-book"></i> Menu</a></li>
+        <li><a href="#orders"><i class="fas fa-clipboard-list"></i> Orders</a></li>
+        <li><a href="#reservations"><i class="fas fa-calendar-check"></i> Reservations</a></li>
+        <li><a href="#inventory"><i class="fas fa-boxes"></i> Inventory</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="container">
+      <h1>Restaurant Management System</h1>
+      <p>Efficiently manage your restaurant operations with our simple yet powerful system</p>
+      <div class="stats">
+        <div class="stat-card">
+          <h3>45</h3>
+          <p>Today's Orders</p>
+        </div>
+        <div class="stat-card">
+          <h3>28</h3>
+          <p>Active Reservations</p>
+        </div>
+        <div class="stat-card">
+          <h3>92%</h3>
+          <p>Customer Satisfaction</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <!-- Dashboard Sections -->
+    <section id="dashboard" class="section">
+      <h2><i class="fas fa-chart-line"></i> Dashboard Overview</h2>
+      <div class="dashboard-grid">
+        <div class="card">
+          <h3><i class="fas fa-dollar-sign"></i> Today's Revenue</h3>
+          <p class="amount">৳৬৫,৪৫০</p>
+          <div class="progress-bar">
+            <div class="progress" style="width: 75%"></div>
+          </div>
+          <p>75% of daily target</p>
+        </div>
+
+        <div class="card">
+          <h3><i class="fas fa-users"></i> Staff On Duty</h3>
+          <p class="amount">8/12</p>
+          <div class="staff-list">
+            <span class="staff-badge">Chef</span>
+            <span class="staff-badge">Waiter</span>
+            <span class="staff-badge">Manager</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3><i class="fas fa-clock"></i> Peak Hours</h3>
+          <p class="amount">7:00 PM - 9:00 PM</p>
+          <p>Most busy period</p>
+        </div>
+
+        <div class="card">
+          <h3><i class="fas fa-star"></i> Top Dish</h3>
+          <p class="amount">মিজান ভাই এর ভাত</p>
+          <p>Ordered 32 times today</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu Management -->
+    <section id="menu" class="section">
+      <h2><i class="fas fa-book"></i> Menu Management</h2>
+      <div class="menu-controls">
+        <button class="btn"><i class="fas fa-plus"></i> Add Item</button>
+        <button class="btn"><i class="fas fa-edit"></i> Edit Menu</button>
+        <button class="btn"><i class="fas fa-print"></i> Print Menu</button>
+      </div>
+      <div class="menu-grid">
+        <div class="menu-item">
+          <div class="menu-item-header">
+            <h3>মিজান ভাই এর ভাত</h3>
+            <span class="price">৳100</span>
+          </div>
+          <p>মাত্র ১০০ টাকা ভাত আনলিমিটেড, গরুর মাংস এক পিছ</p>
+          <div class="menu-tags">
+            <span class="tag popular">Popular</span>
+            <span class="tag category">Main Course</span>
+          </div>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-header">
+            <h3>ব্রেকআপ ঝালমুড়ি</h3>
+            <span class="price">৳৪০</span>
+          </div>
+          <p>খাইবেন আর নাচানাচি করবেন</p>
+          <div class="menu-tags">
+            <span class="tag category">Appetizer</span>
+          </div>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-header">
+            <h3>ভাইরাল কেক</h3>
+            <span class="price">৳১০০</span>
+          </div>
+          <p>স্ট্রবেরি ফ্লেভার</p>
+          <div class="menu-tags">
+            <span class="tag popular">Popular</span>
+            <span class="tag category">Dessert</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Orders Section -->
+    <section id="orders" class="section">
+      <h2><i class="fas fa-clipboard-list"></i> Recent Orders</h2>
+      <div class="table-container">
+        <table class="orders-table">
+          <thead>
+            <tr>
+              <th>Order ID</th>
+              <th>Table</th>
+              <th>Items</th>
+              <th>Status</th>
+              <th>Amount</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>#ORD-456</td>
+              <td>Table 5</td>
+              <td>2 items</td>
+              <td><span class="status preparing">Preparing</span></td>
+              <td>৳৬০০</td>
+              <td><button class="btn-sm">Process</button></td>
+            </tr>
+            <tr>
+              <td>#ORD-455</td>
+              <td>Table 3</td>
+              <td>3 items</td>
+              <td><span class="status served">Served</span></td>
+              <td>৳১২০০</td>
+              <td><button class="btn-sm">Bill</button></td>
+            </tr>
+            <tr>
+              <td>#ORD-454</td>
+              <td>Takeaway</td>
+              <td>4 items</td>
+              <td><span class="status ready">Ready</span></td>
+              <td>৳৪০০</td>
+              <td><button class="btn-sm">Complete</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Reservations -->
+    <section id="reservations" class="section">
+      <h2><i class="fas fa-calendar-check"></i> Today's Reservations</h2>
+      <div class="reservations-grid">
+        <div class="reservation-card">
+          <div class="reservation-header">
+            <h3>CR Tonoy</h3>
+            <span class="time">7:30 PM</span>
+          </div>
+          <p><i class="fas fa-user-friends"></i> 4 persons</p>
+          <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+          <div class="reservation-actions">
+            <button class="btn-sm confirm">Confirm</button>
+            <button class="btn-sm cancel">Cancel</button>
+          </div>
+        </div>
+
+        <div class="reservation-card confirmed">
+          <div class="reservation-header">
+            <h3>Buddijibi Mishal</h3>
+            <span class="time">8:00 PM</span>
+          </div>
+          <p><i class="fas fa-user-friends"></i> 2 persons</p>
+          <p><i class="fas fa-phone"></i> (555) 987-6543</p>
+          <div class="reservation-actions">
+            <span class="confirmed-text">Confirmed</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Developers Section -->
+  <section class="developers-section">
+    <div class="container">
+      <h2><i class="fas fa-code"></i> Project Developers</h2>
+      <p class="section-subtitle">This restaurant management system was developed by:</p>
+
+      <div class="developers-grid">
+        <!-- Developer 1 -->
+        <div class="developer-card">
+          <div class="developer-img">
+            <img src="images/mizan.jpg" alt="Md. Mizanur Rahman"
+              onerror="this.src='https://i.ibb.co/6zLpG0s/1764168073154.jpg'">
+          </div>
+          <div class="developer-info">
+            <h3>Md. Mizanur Rahman</h3>
+            <p class="role">Backend Developer & Database Designer</p>
+            <p class="bio">Specialized in system architecture, database management, and server-side operations. Ensures
+              smooth data flow and system reliability.</p>
+            <div class="skills">
+              <span>Node.js</span>
+              <span>MySQL</span>
+              <span>API Design</span>
+            </div>
+            <div class="contact-info">
+              <p><i class="fas fa-envelope"></i> higheritinstitute@gmail.com</p>
+              <p><i class="fas fa-phone"></i> +880 1928812161</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Developer 2 -->
+        <div class="developer-card">
+          <div class="developer-img">
+            <img src="images/mehirab.jpg" alt="Mehirab Hossain"
+              onerror="this.src='https://i.ibb.co/NdxnFKYM/589593557-1436105908476647-6708495361105260360-n.jpg'">
+          </div>
+          <div class="developer-info">
+            <h3>Mehirab Hossain</h3>
+            <p class="role">Frontend Developer & UI/UX Designer</p>
+            <p class="bio">Focused on creating intuitive user interfaces and seamless user experiences. Ensures the
+              system is both beautiful and functional.</p>
+            <div class="skills">
+              <span>HTML/CSS</span>
+              <span>JavaScript</span>
+              <span>React</span>
+            </div>
+            <div class="contact-info">
+              <p><i class="fas fa-envelope"></i> mdmehrabhossain90@gmail.com
+              </p>
+              <p><i class="fas fa-phone"></i> +880 1863420700</p>
+            </div>
+          </div>
+        </div>s
+      </div>
+
+      <div class="project-info">
+        <h3><i class="fas fa-university"></i> Project Information</h3>
+        <p>This Restaurant Management System is submitted as a final project for the Software Engineering course at our
+          campus. The system demonstrates practical implementation of full-stack web development concepts including
+          database design, frontend-backend integration, and user experience design.</p>
+        <div class="tech-stack">
+          <h4>Technology Stack:</h4>
+          <div class="tech-tags">
+            <span>HTML5</span>
+            <span>CSS3</span>
+            <span>JavaScript</span>
+            <span>Node.js</span>
+            <span>MySQL</span>
+            <span>REST API</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <i class="fas fa-utensils"></i>
+          <span>Agargaon Restaurant</span>
+        </div>
+        <p class="footer-text">Restaurant Management System &copy; 2025 | Campus Project</p>
+        <p class="footer-subtext">Developed by Md. Mizanur Rahman & Mehirab Hossain</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
